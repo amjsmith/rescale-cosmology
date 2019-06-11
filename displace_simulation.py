@@ -37,7 +37,6 @@ def rescale_outerrim(file_number, snapshot, zorig, ztarg, Pk_orig, Pk_targ):
     pos = pos*s
     mass = mass * s_m
     L = 3000. * s
-    vel_orig = vel.copy()
     vel = vel * s_v
 
     b_eff = P_targ.b_eff(Mmin*s_m, Mmax*s_m, ztarg)
@@ -53,8 +52,8 @@ def rescale_outerrim(file_number, snapshot, zorig, ztarg, Pk_orig, Pk_targ):
         d.apply_shift(pos, vel, mass, P_orig, P_targ, s, zorig, ztarg)
 
 
-    
-    f = h5py.File("outerrim_new.hdf5")
+    # save new file
+    f = h5py.File("outerrim_new_file%i.hdf5"%file_number)
     f.create_dataset("Mass", data=mass, compression="gzip")
     f.create_dataset("Position", data=pos_new, compression="gzip")
     f.create_dataset("Velocity", data=vel_new, compression="gzip")

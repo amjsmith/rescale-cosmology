@@ -48,12 +48,12 @@ the density field separately for each of the 110 OuterRim snapshot files, and th
 `merge_grid.py` can be run to combine the 110 grid files into a single file, which is then read in when applying the 
 rescaling procedure.
 
-If running this code on a smaller simulation, this step is not necessary, and `displace_simulation.py` can be modified
+If running this code on a smaller simulation, this step is not necessary, and `rescale_snapshot.py` can be modified
 to calculate the grid, instead of reading it from a file.
 
-## Rescaling the simulation snapshot (displace_simulation.py)
+## Rescaling the simulation snapshot (rescale_snapshot.py)
 
-Once a file containing the haloes on a grid has been created, the main program `displace_simulation.py` can be run
+Once a file containing the haloes on a grid has been created, the main program `rescale_snapshot.py` can be run
 to perform the rescaling procedure. Since the entire simulation is so large, this should be run separately for
 each of the 110 OuterRim files.
 

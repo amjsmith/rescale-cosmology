@@ -8,6 +8,9 @@ extension of the method of Angulo & White (https://arxiv.org/abs/0912.4277).
 
 See https://github.com/alexander-mead/particle-rescaling for a Fortran implementation of the method.
 
+The code for putting haloes on a grid and calculating the displacement field was based on the reconstruction code 
+from https://github.com/julianbautista/eboss_clustering
+
 # Rescaling the OuterRim simulation
 
 ## Downloading an OuterRim snapshot

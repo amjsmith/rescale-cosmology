@@ -2,7 +2,7 @@ import numpy as np
 import h5py
 
 
-def merge_delta(Nfiles=110):
+def merge_grid(Nfiles=110):
     deltaH = None
     N=0
 
@@ -28,4 +28,4 @@ def merge_delta(Nfiles=110):
 
 if __name__ == "__main__":
 
-    merge_delta()
+    merge_grid()

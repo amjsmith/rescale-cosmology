@@ -17,7 +17,7 @@ def read_outerrim(snapshot, redshift, file_number, path=""):
         mass: array of masses in units [Msun/h]
     """
 
-    f = path + "02_17_2016.OuterRim.%i.fofproperties#%i"%(snap,file_number)
+    halo_cat = path + "02_17_2016.OuterRim.%i.fofproperties#%i"%(snapshot,file_number)
 
     # read halo mass
     mass = genericio.gio_read(halo_cat, 'fof_halo_mass')[0]

@@ -4,9 +4,9 @@ from displacement_field import DisplacementField
 import sys
 
 
-def make_grid(file_number, snapshot, redshift, nbins):
+def make_grid(file_number, snapshot, redshift, nbins, path=""):
 
-    pos, vel, mass = read_outerrim(snapshot, redshift)
+    pos, vel, mass = read_outerrim(snapshot, redshift, file_number, path=path)
 
     try:
         # code will calculate density field and save to file,
@@ -23,11 +23,13 @@ if __name__ == "__main__":
 
     file_number = int(sys.argv[1])
 
+    path="path/to/outerrim/snapshot/files/"
+    
     snapshot=198
     redshift=1.494
     nbins = 750
     
-    make_grid(file_number, snapshot, redshift, nbins)
+    make_grid(file_number, snapshot, redshift, nbins, path)
 
 
 
